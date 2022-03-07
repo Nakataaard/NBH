@@ -3518,7 +3518,7 @@ _🎲LIMIT: ${isOwner ? 'Unlimited' : isPremium ? 'Unlimited' : getLimit(sender,
 ┃╠${prefix}level
 ┃╠${prefix}leaderboards
 ┃╚═════════════════✪
-┗━━━「 BOT-WHATSAPP 」━━━⭓
+┗━━━「 NAHBOTZ 」━━━⭓
 *This script not have a apikey*
     `
   , imageMessage: imageMsg,
@@ -3532,7 +3532,7 @@ mentionedJid: parseMention(lol), externalAdReply: {
   title: `𝘏𝘌𝘓𝘓𝘖 ${pushname} `,
   body: `${ucapanWaktu} Semoga harimu menyenangkan`,
   mediaType: 2,
-  mediaUrl: "https://youtu.be/5DXNC4_Bj_U",
+  mediaUrl: "https://youtu.be/r3AgBcdiiXc",
   thumbnail: fs.readFileSync('./gambar/menu.jpg'),
 }, forwardingScore: 508, isForwarded: false, mentionedJid: [Tag + '@s.whatsapp.net', senderr]
     }
