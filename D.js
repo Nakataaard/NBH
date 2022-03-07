@@ -300,13 +300,13 @@ module.exports = deff = async (deff, mek) => {
 
 //=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×=×
 
-        let ftroli ={key: {fromMe: false,"participant":"0@s.whatsapp.net",   "remoteJid": "6285748894171-1604595598@g.us"  }, "message": {orderMessage: {itemCount: 10,status: 200, thumbnail: fs.readFileSync(`./gambar/thumb.jpg`), surface: 200, message: `「	BOT WHATSAPP   」	`, orderTitle: 'deffpratama', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
-        let fdoc = {key : {participant : '0@s.whatsapp.net'},message: {documentMessage: {title: `「	BOT WHATSAPP   」	`,jpegThumbnail: fs.readFileSync(`./gambar/thumb.jpg`)}}}
+        let ftroli ={key: {fromMe: false,"participant":"0@s.whatsapp.net",   "remoteJid": "6285748894171-1604595598@g.us"  }, "message": {orderMessage: {itemCount: 10,status: 200, thumbnail: fs.readFileSync(`./gambar/thumb.jpg`), surface: 200, message: `「	NAHBOTZ   」	`, orderTitle: 'deffpratama', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
+        let fdoc = {key : {participant : '0@s.whatsapp.net'},message: {documentMessage: {title: `「	NAHBOTZ   」	`,jpegThumbnail: fs.readFileSync(`./gambar/thumb.jpg`)}}}
         let fvn = {key: {participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6285748894171-1613049930@g.us" } : {})},message: { "audioMessage": {"mimetype":"audio/ogg; codecs=opus","seconds":99999,"ptt": "true"}} } 
-        let fgif = {key: {participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6285748894171-1613049930@g.us" } : {})},message: {"videoMessage": { "title":`「	BOT WHATSAPP   」	`, "h": `Hmm`,'seconds': '99999', 'gifPlayback': 'true', 'caption': `「	BOT WHATSAPP   」	`, 'jpegThumbnail': fs.readFileSync(`./gambar/thumb.jpg`)}}}
-	   let fgclink = {key: {participant: "0@s.whatsapp.net","remoteJid": "0@s.whatsapp.net"},"message": {"groupInviteMessage": {"groupJid": "6285748894171-1616169743@g.us","inviteCode": "m","groupName": "P", "caption": `「	BOT WHATSAPP   」	`, 'jpegThumbnail': fs.readFileSync(`./gambar/thumb.jpg`)}}}
-	   let fvideo = {key: { fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {}) },message: { "videoMessage": { "title":`「	BOT WHATSAPP   」	`, "h": `Hmm`,'seconds': '99999', 'caption': `「	BOT WHATSAPP   」	`, 'jpegThumbnail': fs.readFileSync(`./gambar/thumb.jpg`)}}}
-	   let floc = {key : {participant : '0@s.whatsapp.net'},message: {locationMessage: {name: `「	BOT WHATSAPP   」	`,jpegThumbnail: fs.readFileSync(`./gambar/thumb.jpg`)}}}
+        let fgif = {key: {participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6285748894171-1613049930@g.us" } : {})},message: {"videoMessage": { "title":`「	NAHBOTZ  」	`, "h": `Hmm`,'seconds': '99999', 'gifPlayback': 'true', 'caption': `「	NAHBOTZ   」	`, 'jpegThumbnail': fs.readFileSync(`./gambar/thumb.jpg`)}}}
+	   let fgclink = {key: {participant: "0@s.whatsapp.net","remoteJid": "0@s.whatsapp.net"},"message": {"groupInviteMessage": {"groupJid": "6285748894171-1616169743@g.us","inviteCode": "m","groupName": "P", "caption": `「	NAHBOTZ   」	`, 'jpegThumbnail': fs.readFileSync(`./gambar/thumb.jpg`)}}}
+	   let fvideo = {key: { fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {}) },message: { "videoMessage": { "title":`「	NAHBOTZ   」	`, "h": `Hmm`,'seconds': '99999', 'caption': `「	NAHBOTZ   」	`, 'jpegThumbnail': fs.readFileSync(`./gambar/thumb.jpg`)}}}
+	   let floc = {key : {participant : '0@s.whatsapp.net'},message: {locationMessage: {name: `「	NAHBOTZ  」	`,jpegThumbnail: fs.readFileSync(`./gambar/thumb.jpg`)}}}
 	   let fkontak = { key: {participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: `6283136505591-1614953337@g.us` } : {}) }, message: { 'contactMessage': { 'displayName': `@BY NAKATA`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;@BY NAKATA,;;;\nFN:@BY NAKATA,\nitem1.TEL;waid=${sender.split('@')[0]}:${sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': fs.readFileSync(`./gambar/thumb.jpg`), thumbnail: fs.readFileSync(`./gambar/thumb.jpg`),sendEphemeral: true}}}
 	   var fakeReplyList = ['ftroli', 'fdoc', 'fvn', 'fgif', 'fgclink', 'fvideo', 'floc', 'fkontak']
 	   var fakeReply = fakeReplyList[Math.floor(Math.random() * fakeReplyList.length)];
@@ -318,7 +318,7 @@ let fakeitem = (teks) => {
         	fromMe:false,
         participant:`0@s.whatsapp.net`, ...(from ? {
 remoteJid :"6289523258649-1604595598@g.us" }: {})
-                    },message:{"orderMessage":{"orderId":"174238614569481","thumbnail":fs.readFileSync(`./gambar/thumb.jpg`),"itemCount":10,"status":"INQUIRY","surface":"CATALOG","message":`「	BOT WHATSAPP   」	`,"token":"AR6xBKbXZn0Xwmu76Ksyd7rnxI+Rx87HfinVlW4lwXa6JA=="}}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true})}
+                    },message:{"orderMessage":{"orderId":"174238614569481","thumbnail":fs.readFileSync(`./gambar/thumb.jpg`),"itemCount":10,"status":"INQUIRY","surface":"CATALOG","message":`「	 NAHBOTZ   」	`,"token":"AR6xBKbXZn0Xwmu76Ksyd7rnxI+Rx87HfinVlW4lwXa6JA=="}}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true})}
         
 //=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×=×
 var elit = 'Petualang Biasa'
