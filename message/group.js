@@ -45,20 +45,19 @@ module.exports = async(deff, anu, welcome) => {
 │ *Terimakasih Sudah*
 │ *Mau join*
 ╰┬────────────┈ ⳹
-┌┤◦➛ *Nama :* 
-││◦➛ *Asal :* 
-││◦➛ *Gender :* 
-││◦➛ *Status :* 
-││◦➛ *Kelengkapan Ortu :* 
+┌┤◦➛ *Perkenalkan Saya NahBotz*
+││◦➛ *Bot Dari WhatsApp*
+││◦➛ *Siap Menemani Anda Kapanpun*
 │╰────────────┈ ⳹
+│
 │ *Untuk menggunakan bot ini*
 │ *Cukup ketik #menu*
 │ *Kalo gapaham tanya member lain* 
 ├────────────────
-│ Jangan lupa isi intro:)
+│ ©Nakataa
 ╰━━━━━━━━━━━━┈ ❋ཻུ۪۪⸙
                `
-	         let buff = await getBuffer(`http://hadi-api.herokuapp.com/api/card/welcome?nama=${anu_user}&descriminator=${time_wel}&memcount=${memeg}&gcname=${encodeURI(mdata.subject)}&pp=${pp_user}&bg=https://telegra.ph/file/5fa6532fb8bf0f0e579f2.jpg`) 
+	         let buff = await getBuffer(`http://hadi-api.herokuapp.com/api/card/welcome?nama=${anu_user}&descriminator=${time_wel}&memcount=${memeg}&gcname=${encodeURI(mdata.subject)}&pp=${pp_user}&bg=https://telegra.ph/file/ca209f81395c15b205f1a.jpg`) 
               let buttons = [{buttonId: `#infogrup`,buttonText:{displayText: 'SELAMAT DATANG'},type:1}]
               let imageMsg = (await deff.prepareMessageMedia((buff), 'imageMessage', {thumbnail: buff})).imageMessage
               let buttonsMessage = { contentText: `${teks}`, footerText: 'JANGAN BUAT ONAR BRO', imageMessage: imageMsg, buttons: buttons, headerType: 4 }
@@ -75,8 +74,8 @@ module.exports = async(deff, anu, welcome) => {
               let  time_wel = moment.tz('Asia/Jakarta').format("HH:mm")
               let  memeg = mdata.participants.length
               let  out = `Jangan Lupakan Kenangan kita\n${anu_user}\nSemoga kamu bahagia diluar sana`
-              let  buff = await getBuffer(`http://hadi-api.herokuapp.com/api/card/goodbye?nama=${anu_user}&descriminator=${time_wel}&memcount=${memeg}&gcname=${encodeURI(mdata.subject)}&pp=${pp_user}&bg=https://telegra.ph/file/5fa6532fb8bf0f0e579f2.jpg`)
-              let  buttons = [{buttonId: `#alquran 1`,buttonText:{displayText: 'SELAMAT JALAN'},type:1}]
+              let  buff = await getBuffer(`http://hadi-api.herokuapp.com/api/card/goodbye?nama=${anu_user}&descriminator=${time_wel}&memcount=${memeg}&gcname=${encodeURI(mdata.subject)}&pp=${pp_user}&bg=https://telegra.ph/file/ca209f81395c15b205f1a.jpg`)
+              let  buttons = [{buttonId: `#alquran 1`,buttonText:{displayText: 'SAYONARA 👋'},type:1}]
               let  imageMsg = (await deff.prepareMessageMedia((buff), 'imageMessage', {thumbnail: buff})).imageMessage
               let  buttonsMessage = { contentText: `${out}`, footerText: 'DONT BACK', imageMessage: imageMsg, buttons: buttons, headerType: 4 }
               let  prep = await deff.prepareMessageFromContent(mdata.id,{buttonsMessage},{})
