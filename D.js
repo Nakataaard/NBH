@@ -1651,7 +1651,7 @@ addBalance(sender, randomNomor(80), balance)
 
 ////=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×=×
 let spam1 = `𝙹𝚊𝚗𝚐𝚊𝚗 𝚜𝚙𝚊𝚖 𝚢𝚊 𝚔𝚊𝚔\n𝙱𝚎𝚛𝚒𝚔𝚊𝚗 𝚓𝚎𝚍𝚊 3 𝚍𝚎𝚝𝚒𝚔/𝚙𝚎𝚛𝚒𝚗𝚝𝚊𝚑`
-let spam2 = 'NahBotz🥰'
+let spam2 = 'NahBotz👑'
 let spam3 = [{
 buttonId: `${prefix}maap`,
 buttonText: {
@@ -1708,6 +1708,7 @@ break
 //=============================================================================================================================
 case 'sewalist': 
 case 'listsewa':
+case 'sewabot':
 let txtnyee = `List Sewa\nJumlah : ${sewa.length}\n\n`
 for (let i of sewa){
 let cekvippsewa = ms(i.expired - Date.now())
@@ -1871,7 +1872,7 @@ other: function (who = '') {
   return who === this.a ? this.b : who === this.b ? this.a : ''
 },
     }
-    await deff.sendButton(from, 'ᴡᴀɪᴛɪɴɢ ᴀ ᴘᴀʀᴛɴᴇʀ', `𝙳𝙴𝙵𝙵𝙱𝙾𝚃𝚉`, 'Keluar', prefix + 'leave')
+    await deff.sendButton(from, 'ᴡᴀɪᴛɪɴɢ ᴀ ᴘᴀʀᴛɴᴇʀ', `NahBotz`, 'Keluar', prefix + 'leave')
   }
   break
 }
@@ -2043,8 +2044,8 @@ case 'premium':
             break
 //==================================================================================
 
-case 'verify': case 'daftar':
- wita = moment.tz('Asia/Makassar').format('HH:mm:ss')
+case 'verify': case 'daftar': 
+ wib = moment.tz('Asia/Jakarta').format('HH:mm:ss')
 let serialUser = createSerial(14)
 										if (isUser) return reply('Kamu sudah terdaftar di dalam database')
 										addRegisterUser(sender, pushname, bio_user, wib)
@@ -2072,16 +2073,16 @@ let serialUser = createSerial(14)
 │ *Untuk Melanjutkan Pengguna*
 └━━━━━━━━━━━━┈ ❋ཻུ۪۪⸙
 *「 ${NamaBot} 」*`
-										let papako = [{
-											"buttonId": `.menu`,
+										buttons = [{
+											"buttonId": `#menu`,
 											"buttonText": {
 												"displayText": "MENU"
 												},
 												"type": "RESPONSE"
 												},{
-													"buttonId": `.limit`,
+													"buttonId": `#limit`,
 													"buttonText": {
-														"displayText": "PROCFILE"
+														"displayText": "PROCFIL"
 														},
 														"type": "RESPONSE"
 													}]
@@ -2238,7 +2239,7 @@ if (!isUser) return sendButMessage(from, a, b, ton,{quoted : freply})
               teks = `*「 LEVEL 」*\n\n➸ *Nama :* ${pushname}\n➸ *Xp :* ${userXp} / ${requiredXp}\n➸ *Level :* ${userLevel}\n➸ *Role*: *${role}*\n\n*Note : Kumpulin Xp Jika Ingin Menaikkan Level*`
               buttons = [{ buttonId: `${prefix}claim`, buttonText: { displayText: 'CLAIM' }, type: 1 },{ buttonId: `${prefix}leaderboard`, buttonText: { displayText: 'LEADEBOARD' },type:1}]
               imageMsg = (await deff.prepareMessageMedia(buffer, "imageMessage", { thumbnail: buffer, })).imageMessage
-              buttonsMessage = {footerText:'follow @deff.xyz', imageMessage: imageMsg,
+              buttonsMessage = {footerText:'follow @nakataa1.a', imageMessage: imageMsg,
               contentText:`${teks}`,buttons,headerType:4}
               prep = await deff.prepareMessageFromContent(from,{buttonsMessage},{quoted: freply})
               deff.relayWAMessage(prep)
@@ -3235,7 +3236,7 @@ if (!isUser) return sendButMessage(from, a, b, ton,{quoted : freply})
             ]);                  
           break;   
 //=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×=×			
-case 'buygamelimit':
+case 'buygamelimit': case 'buyglimit':
 if (!isUser) return sendButMessage(from, a, b, ton,{quoted : freply}) 
  
   if (!q)return reply(`Example : ${prefix + command} 10 1 limit = 100 balance`)
@@ -3349,7 +3350,7 @@ if (!isUser) return sendButMessage(from, a, b, ton,{quoted : freply})
 
 case 'menu':
 case 'help':
-case 'daffa': 
+case 'nakata': 
 if (!isUser) return sendButMessage(from, a, b, ton,{quoted : freply}) 
  
 deff.sendMessage(from, 'Loading... ', text)
@@ -3377,7 +3378,7 @@ _🌐GRUB TOTAL : ${groups.length}_
 _🎲PRIBADI CHAT : ${privat.length}_
 _🎭BATERAI : ${baterai}% ${charger}_
 _🌠TOTAL CHAT : ${totalChat.length}_
-_🏳‍🌈KECEPATAN : ${latensie.toFixed(4)} Detik_
+_⏩KECEPATAN : ${latensie.toFixed(4)} Detik_
 _𓃲RUNTIME : ${runtime(process.uptime())}_
 _🏴‍☠️PLATFORM : ${os.platform()}_
 _🎲LIMIT: ${isOwner ? 'Unlimited' : isPremium ? 'Unlimited' : getLimit(sender, limitCount, limit)}_
@@ -4691,7 +4692,7 @@ Owner NAHBOTZ:
 wa.me/6285748893171`
 sendButMessage(from, anjeng, `Baca rulesnya!, Jangan di baca doang, Patuhi juga ajg❗`, [
 {
-buttonId: `${prefix} command`,
+buttonId: `${prefix} menu`,
 buttonText: {
 displayText: `💾MENU `,
 },
@@ -4704,7 +4705,7 @@ if (!isUser) return sendButMessage(from, a, b, ton,{quoted : freply})
  
 let trut =['Pernah suka sama siapa aja? berapa lama?','Kalau boleh atau kalau mau, di gc/luar gc siapa yang akan kamu jadikan sahabat?(boleh beda/sma jenis)','apa ketakutan terbesar kamu?','pernah suka sama orang dan merasa orang itu suka sama kamu juga?','Siapa nama mantan pacar teman mu yang pernah kamu sukai diam diam?','pernah gak nyuri uang nyokap atau bokap? Alesanya?','hal yang bikin seneng pas lu lagi sedih apa','pernah cinta bertepuk sebelah tangan? kalo pernah sama siapa? rasanya gimana brou?','pernah jadi selingkuhan orang?','hal yang paling ditakutin','siapa orang yang paling berpengaruh kepada kehidupanmu','hal membanggakan apa yang kamu dapatkan di tahun ini','siapa orang yang bisa membuatmu sange','siapa orang yang pernah buatmu sange','(bgi yg muslim) pernah ga solat seharian?','Siapa yang paling mendekati tipe pasangan idealmu di sini','suka mabar(main bareng)sama siapa?','pernah nolak orang? alasannya kenapa?','Sebutkan kejadian yang bikin kamu sakit hati yang masih di inget','pencapaian yang udah didapet apa aja ditahun ini?','kebiasaan terburuk lo pas di sekolah apa?']
 let ttrth = trut[Math.floor(Math.random() * trut.length)]
-truteh = await getBuffer(`https://i.ibb.co/305yt26/bf84f20635dedd5dde31e7e5b6983ae9.jpg`)
+truteh = await getBuffer(`https://telegra.ph/file/2fdbad2e9c20daffd7c29.jpg`)
 deff.sendMessage(from, truteh, image, { caption: '*Truth*\n\n'+ ttrth, quoted: mek })
 break
 //=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×=×			
@@ -4713,7 +4714,7 @@ if (!isUser) return sendButMessage(from, a, b, ton,{quoted : freply})
  
 let dare =['Kirim pesan ke mantan kamu dan bilang "aku masih suka sama kamu','telfon crush/pacar sekarang dan ss ke pemain','pap ke salah satu anggota grup','Bilang "KAMU CANTIK BANGET NGGAK BOHONG" ke cowo','ss recent call whatsapp','drop emot "??💨" setiap ngetik di gc/pc selama 1 hari','kirim voice note bilang can i call u baby?','drop kutipan lagu/quote, terus tag member yang cocok buat kutipan itu','pake foto sule sampe 3 hari','ketik pake bahasa daerah 24 jam','ganti nama menjadi "gue anak lucinta luna" selama 5 jam','chat ke kontak wa urutan sesuai %batre kamu, terus bilang ke dia "i lucky to hv you','prank chat mantan dan bilang " i love u, pgn balikan','record voice baca surah al-kautsar','bilang "i hv crush on you, mau jadi pacarku gak?" ke lawan jenis yang terakhir bgt kamu chat (serah di wa/tele), tunggu dia bales, kalo udah ss drop ke sini','sebutkan tipe pacar mu!','snap/post foto pacar/crush','teriak gajelas lalu kirim pake vn kesini','pap mukamu lalu kirim ke salah satu temanmu','kirim fotomu dengan caption, aku anak pungut','teriak pake kata kasar sambil vn trus kirim kesini','teriak " anjimm gabutt anjimmm " di depan rumah mu','ganti nama jadi " BOWO " selama 24 jam','Pura pura kerasukan, contoh : kerasukan maung, kerasukan belalang, kerasukan kulkas, dll']
 let der = dare[Math.floor(Math.random() * dare.length)]
-buff = await getBuffer(`https://i.ibb.co/305yt26/bf84f20635dedd5dde31e7e5b6983ae9.jpg`)
+buff = await getBuffer(`https://telegra.ph/file/2fdbad2e9c20daffd7c29.jpg`)
 buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️LANJUT`},type:1}]
 imageMsg = (await deff.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
 buttonsMessage = {footerText:'Jangan Lupa Donasi Ya Kak ☕', imageMessage: imageMsg,
@@ -4744,7 +4745,7 @@ setTimeout( () => {
 deff.sendMessage(from, '_30 Detik lagi..._', text, {quoted: fkontak})
 }, 2500)
 setTimeout( () => {
-deff.sendMessage(from, ngebuff, image, { caption: '_Hayo jawabannya apa😅, Kalo salah donasj ya😀_', quoted: freply })
+deff.sendMessage(from, ngebuff, image, { caption: '_Hayo jawabannya apa😅, Kalo salah donasi ya😀_', quoted: freply })
 }, 0)
 break
 //=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×=×			
