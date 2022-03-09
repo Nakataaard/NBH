@@ -2045,7 +2045,7 @@ case 'premium':
 //==================================================================================
 
 case 'verify': case 'daftar': 
- wita = moment.tz('Asia/Makassar').format('HH:mm:ss')
+wita = moment.tz('Asia/Makassar').format('HH:mm:ss')
 let serialUser = createSerial(14)
 										if (isUser) return reply('Kamu sudah terdaftar di dalam database')
 										addRegisterUser(sender, pushname, bio_user, wib)
@@ -2073,7 +2073,7 @@ let serialUser = createSerial(14)
 │ *Untuk Melanjutkan Pengguna*
 └━━━━━━━━━━━━┈ ❋ཻུ۪۪⸙
 *「 ${NamaBot} 」*`
-										buttons = [{
+										let papako = [{
 											"buttonId": `#menu`,
 											"buttonText": {
 												"displayText": "MENU"
