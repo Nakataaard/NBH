@@ -199,7 +199,7 @@ module.exports = deff = async (deff, mek) => {
 		mek.message = (Object.keys(mek.message)[0] === 'ephemeralMessage') ? mek.message.ephemeralMessage.message : mek.message
 		let { text, extendedText, contact, location, liveLocation, image, video, sticker, document, audio, product } = MessageType
 		let time = moment.tz('Asia/Jakarta').format('DD/MM HH:mm:ss')
-      	let wib = moment.tz('Asia/Jakarta').format('HH:mm:ss')
+      	let wita = moment.tz('Asia/Makassar').format('HH:mm:ss')
 		let content = JSON.stringify(mek.message)
 		let from = mek.key.remoteJid
 	     let hour_now = moment().format('HH:mm:ss')
@@ -2045,7 +2045,7 @@ case 'premium':
 //==================================================================================
 
 case 'verify': case 'daftar': 
- wib = moment.tz('Asia/Jakarta').format('HH:mm:ss')
+ wita = moment.tz('Asia/Makassar').format('HH:mm:ss')
 let serialUser = createSerial(14)
 										if (isUser) return reply('Kamu sudah terdaftar di dalam database')
 										addRegisterUser(sender, pushname, bio_user, wib)
