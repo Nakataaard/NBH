@@ -3992,25 +3992,34 @@ if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply(mess.li
 limitAdd(sender, limit) 
                break
 //=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×=×			
-case 'kick':
-		   if (!isGroup) return reply(mess.only.group)
-		   if (!isOwner && !isGroupAdmins) return reply(mess.only.admin)
-		   if (!isBotGroupAdmins) return reply(`bot harus admin`)
-		   if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('𝗧𝗮𝗴 𝘁𝗮𝗿𝗴𝗲𝘁 ??y𝗮𝗻𝗴 𝗶𝗻𝗴𝗶𝗻 𝗱𝗶 𝘁𝗲𝗻𝗱𝗮𝗻𝗴!')
-		   mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
-		   if (mentioned.length > 1) {
-		   teks = ''
-		   for (let _ of mentioned) {
-		   teks += `asek dapat makanan,otw mengkickmu, 🏃sksks :\n`
-		   teks += `@_.split('@')[0]`
-		   }
-		   mentions(teks, mentioned, true)
-		   deff.groupRemove(from, mentioned)
-		   } else {
-		   mentions(`asek dapat makanan,otw mengkickmu, @${mentioned[0].split('@')[0]} 🏃`, mentioned, true)
-		   deff.groupRemove(from, mentioned)
-		   }
-		   break		   
+case 'kick': 			
+           if (!isGroup) return reply(mess.only.group)
+           if (!isGroupAdmins && !mek.key.FromMe && !isOwner) return reply(mess.only.admin)
+          if (!isBotGroupAdmins) return reply('Bot not admin');
+			if (deff.message.extendedTextMessage === undefined || deff.message.extendedTextMessage === null) return
+			mentioned = deff.message.extendedTextMessage.contextInfo.mentionedJid
+			mentions(mentioned, true)
+			deff.groupRemove(from, mentioned)
+			} else {
+			await deff.groupRemove(from, mentionUser)
+			reply(`SUCCESS`)
+			}
+			break	     	 
+            break
+			case 'add':
+			if (!isGroup) return reply(mess.only.group)
+if (!isGroupAdmins && !mek.key.FromMe && !isOwner) return reply(mess.only.admin)
+if (!isBotGroupAdmins) return reply('Bot not admin');	 
+			if (args.length < 1) return reply('NOMER NYA MANA')
+			if (args[0].startsWith('08')) return reply('GUNAKAN KODE NEGARA!')
+			try {
+			num = `${args[0].replace(/ /g, '')}@s.whatsapp.net`
+			deff.groupAdd(from, [num])
+			} catch (e) {
+			console.log('Error :', e)
+			reply('GAGAL MENAMBAHKAN TARGET, MUNGKIN KARENA DI PRIVATE')
+			}
+			break			 		 
 
 //=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×=×			
 case 'add':
