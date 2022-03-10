@@ -3950,7 +3950,7 @@ if (!isUser) return sendButMessage(from, a, b, ton,{quoted : freply})
         buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1}]
               imageMsg = (await deff.prepareMessageMedia(di, "imageMessage", { thumbnail: di, })).imageMessage
               buttonsMessage = {footerText:'[ • BOTWEA • ]︎', imageMessage: imageMsg,
-              contentText:`Follow ig owner @BY DEFF`,buttons,headerType:4}
+              contentText:`Follow ig owner @BY NAKATA`,buttons,headerType:4}
               prep = await deff.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftroli})
               deff.relayWAMessage(prep)
         break
