@@ -3992,35 +3992,13 @@ if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply(mess.li
 limitAdd(sender, limit) 
                break
 //=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×=×			
-case 'kick': 			
-           if (!isGroup) return reply(mess.only.group)
-           if (!isGroupAdmins && !mek.key.FromMe && !isOwner) return reply(mess.only.admin)
-          if (!isBotGroupAdmins) return reply('Bot not admin');
-			if (deff.message.extendedTextMessage === undefined || deff.message.extendedTextMessage === null) return
-			mentioned = deff.message.extendedTextMessage.contextInfo.mentionedJid
-			mentions(mentioned, true)
-			deff.groupRemove(from, mentioned)
-			} else {
-			await deff.groupRemove(from, mentionUser)
-			reply(`SUCCESS`)
-			}
-			break	     	 
-            break
-			case 'add':
-			if (!isGroup) return reply(mess.only.group)
-if (!isGroupAdmins && !mek.key.FromMe && !isOwner) return reply(mess.only.admin)
-if (!isBotGroupAdmins) return reply('Bot not admin');	 
-			if (args.length < 1) return reply('NOMER NYA MANA')
-			if (args[0].startsWith('08')) return reply('GUNAKAN KODE NEGARA!')
-			try {
-			num = `${args[0].replace(/ /g, '')}@s.whatsapp.net`
-			deff.groupAdd(from, [num])
-			} catch (e) {
-			console.log('Error :', e)
-			reply('GAGAL MENAMBAHKAN TARGET, MUNGKIN KARENA DI PRIVATE')
-			}
-			break			 		 
-
+case 'kick':
+if (!isUser) return sendButMessage(from, a, b, ton,{quoted : freply}) 
+ 
+if (!isGroup) return reply("Khusus di grup");
+if (!isGroupAdmins && !mek.key.fromMe) return reply("Khusus admin");
+kick(from, mentionUser)
+break
 //=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×=×			
 case 'add':
 if (!isUser) return sendButMessage(from, a, b, ton,{quoted : freply}) 
