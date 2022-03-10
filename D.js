@@ -3993,12 +3993,25 @@ limitAdd(sender, limit)
                break
 //=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×=×			
 case 'kick':
-if (!isUser) return sendButMessage(from, a, b, ton,{quoted : freply}) 
- 
-if (!isGroup) return reply("Khusus di grup");
-if (!isGroupAdmins && !mek.key.fromMe) return reply("Khusus admin");
-kick(from, mentionUser)
-break
+		   if (!isGroup) return reply(mess.only.group)
+		   if (!isOwner && !isGroupAdmins) return reply(mess.only.admin)
+		   if (!isBotGroupAdmins) return reply(`bot harus admin`)
+		   if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('𝗧𝗮𝗴 𝘁𝗮𝗿𝗴𝗲𝘁 ??y𝗮𝗻𝗴 𝗶𝗻𝗴𝗶𝗻 𝗱𝗶 𝘁𝗲𝗻𝗱𝗮𝗻𝗴!')
+		   mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+		   if (mentioned.length > 1) {
+		   teks = ''
+		   for (let _ of mentioned) {
+		   teks += `asek dapat makanan,otw mengkickmu, 🏃sksks :\n`
+		   teks += `@_.split('@')[0]`
+		   }
+		   mentions(teks, mentioned, true)
+		   deff.groupRemove(from, mentioned)
+		   } else {
+		   mentions(`asek dapat makanan,otw mengkickmu, @${mentioned[0].split('@')[0]} 🏃`, mentioned, true)
+		   deff.groupRemove(from, mentioned)
+		   }
+		   break		   
+
 //=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×==×=×=×=×=×=×=×=×=×=×			
 case 'add':
 if (!isUser) return sendButMessage(from, a, b, ton,{quoted : freply}) 
